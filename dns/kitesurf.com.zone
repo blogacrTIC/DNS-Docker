@@ -1,0 +1,13 @@
+; Zone file for kitesurf.com
+$TTL    604800
+@       IN      SOA     ns1.kitesurf.com. admin.kitesurf.com. (
+                              2         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+        IN      NS      ns1.kitesurf.com.
+ns1     IN      A       172.17.160.1
+www     IN      A       172.17.160.1
+

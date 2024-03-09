@@ -1,0 +1,15 @@
+version: '5'
+services:
+  apache:
+    build: .
+    container_name: apache_ac
+    ports:
+     - "53:53/udp"
+     - "80:80"
+     - "8080:8080"
+    dns: 127.0.0.1
+    tty: true
+    stdin_open: true
+    command: /bin/bash -c "./entrypoint.sh && tail -f /var/log/named.log"
+    
+    
